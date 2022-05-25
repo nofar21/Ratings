@@ -5,14 +5,58 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
+    
   }
 }
 
 html {
   position: relative;
   min-height: 100%;
+  
+}
+
+@keyframes move {
+    0% {
+        background-color: rgb(95, 181, 181);
+    }
+
+    20% {
+        background-color: rgb(101, 160, 145);
+    }
+
+    40% {
+        background-color: rgb(162, 202, 189);
+    }
+
+    60% {
+        background-color: rgb(162, 202, 189);
+    }
+
+    80% {
+        background-color: rgb(101, 160, 145);
+    }
+
+    100% {
+        background-color: rgb(95, 181, 181);
+    }
+}
+
+.container {
+    margin-top: 50px;
+    background-color: rgb(200, 192, 206);
+    /* width: 25%; */
+    flex: 6;
+    animation: move 45s infinite;
+    height:fit-content;
 }
 
 body {
-  margin-bottom: 60px;
+    background-image: url('/Images/TokiBack.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
