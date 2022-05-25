@@ -1,0 +1,38 @@
+﻿@model List<Rating>
+<a asp-action="Create">Create New</a>
+<table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Name Of Rater</th>
+            <th>Rate Number</th>
+            <th>Feedback</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var rating in Model)
+        {
+        <tr>
+            <td>@rating.Id</td>
+            <td>@rating.NameOfRater</td>
+            <td>@rating.RateNumber</td>
+            <td>@rating.Feedback</td>
+            <td>@rating.Time</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@rating.Id">Info</a>
+                <a asp-action="Edit" asp-route-id="@rating.Id">Edit</a>
+                <a asp-action="Delete" asp-route-id="@rating.Id">Delete</a>
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>
+@if (Model.Count() != 0)
+{
+    <th>
+        Average of ratings is @Model.Average(r => r.RateNumber).ToString("0.00")
+    </th>
+}

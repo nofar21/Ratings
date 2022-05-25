@@ -1,0 +1,59 @@
+﻿@model Rating
+<form asp-action="Create">
+    @*<input type="hidden" name="id" value="@Model.Id"/>*@
+    <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="NameOfRater"></label>
+            <input asp-for="NameOfRater" class="form-control" />
+            <span asp-validation-for="NameOfRater" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="RateNumber"></label>
+            <input asp-for="RateNumber" class="form-control" />
+            <span asp-validation-for="RateNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Feedback"></label>
+            <input asp-for="Feedback" class="form-control" />
+            <span asp-validation-for="Feedback" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" name="Send" />
+        </div>@*
+    <div>
+        <label>Name:</label>
+        <input name="name" />
+    </div>
+    <div>
+        <label>Rating:</label>
+        <input name="rating" />
+    </div>
+    <div>
+        <label>Feedback :)</label>
+        <input name="feedback" />
+    </div>
+    <div>
+        <input type="submit" name="Send" />
+    </div>
+</form>
+*@
+@*<form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="NameOfRater" class="control-label"></label>
+            <input asp-for="NameOfRater" class="form-control" />
+            <span asp-validation-for="NameOfRater" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="RateNumber" class="control-label"></label>
+            <input asp-for="RateNumber" class="form-control" />
+            <span asp-validation-for="RateNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Feedback" class="control-label"></label>
+            <input asp-for="Feedback" class="form-control" />
+            <span asp-validation-for="Feedback" class="text-danger"></span>
+        </div>
+        *@
+    </form>
