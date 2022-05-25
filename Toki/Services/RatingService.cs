@@ -42,5 +42,13 @@ namespace Toki.Services
         {
             rateList.Remove(GetRating(id));
         }
+
+      //  public IEnumerable<Rating> SearchInRankings(string query)
+       // {
+       //     var q = from    rank in rateList
+      //              where   rank.Feedback.Contains(query)
+      //              select  rank;
+      //      return q;
+      //  }
     }
 }

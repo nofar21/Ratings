@@ -13,5 +13,6 @@ namespace Toki.Services
         public void CreateRating(string name, int rating, string feedback);
         public void EditRating(int id, string name, int rating, string feedback);
         public void DeleteRanking(int id);
+        //public IEnumerable<Rating> SearchInRankings(string query);
     }
 }

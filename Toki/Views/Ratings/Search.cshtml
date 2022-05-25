@@ -1,6 +1,9 @@
 ﻿@model List<Rating>
 <a asp-action="Create">Create New</a>
-<a asp-action="Search">Search</a>
+<form asp-action="Search">
+    <input name="query" />
+    <input type="submit" value="Search"/>
+</form>
 <table class="table table-bordered table-hover">
     <thead class="thead-dark">
         <tr>
@@ -36,4 +39,7 @@
     <th>
         Average of ratings is @Model.Average(r => r.RateNumber).ToString("0.00")
     </th>
+<form asp-action="Index">
+    <input type="submit" value="Return"/>
+</form>
 }

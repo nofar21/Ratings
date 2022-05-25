@@ -32,6 +32,25 @@ namespace Toki.Controllers
             return View(service.GetAllRatings());
         }
 
+        public ActionResult Search()
+        {
+            return View(service.GetAllRatings());
+        }
+
+        [HttpPost]
+        public ActionResult Search(string query)
+        {
+            if (!string.IsNullOrEmpty(query))
+            {
+                List<Rating> rateList = service.GetAllRatings();
+                var q = from rank in rateList
+                        where rank.Feedback.Contains(query)
+                        select rank;
+                return View(q.ToList());
+            }
+            return View(service.GetAllRatings());
+        }
+
         // GET: RatingsController/Details/5
         public ActionResult Details(int id)
         {
