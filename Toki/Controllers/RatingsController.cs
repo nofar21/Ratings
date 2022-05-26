@@ -18,12 +18,6 @@ namespace Toki.Controllers
         public RatingsController(IRatingService ser)
         {
             this.service = ser;
-            //service = new RatingService();
-            //if (rateList.Count == 0)
-            //{
-            //    rateList.Add(new Rating() { Id = 1, NameOfRater = "Yossi", Feedback = "Great!", RateNumber = 4, Time = DateTime.Now });
-            //    rateList.Add(new Rating() { Id = 2, NameOfRater = "Sivan", Feedback = "Lame!!!", RateNumber = 1, Time = DateTime.Now });
-           // }
         }
 
         // GET: RatingsController
@@ -66,7 +60,6 @@ namespace Toki.Controllers
         // POST: RatingsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind("NameOfRater,RateNumber, Feedback")] Rating rating)
         public ActionResult Create(string  NameOfRater, int RateNumber, string Feedback)
         {
 
@@ -89,7 +82,6 @@ namespace Toki.Controllers
             }
             return View();
             
-            //return RedirectToAction(nameof(Index));
         }
 
         // POST: RatingsController/Edit/5

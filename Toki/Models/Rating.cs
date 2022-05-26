@@ -16,9 +16,6 @@ namespace Toki.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Name is required")]
         public string NameOfRater { get; set; }
 
-        //, ErrorMessage = "Please insert numbers"
-        [RegularExpression(@"/^[1-5]$/")]
-        //[Range(1,5)]
         [Display(Name = "Rate Number")]
         [Required]
         public int RateNumber { get; set; }

@@ -1,4 +1,20 @@
 ﻿@model List<Rating>
+<button class="btn btn-outline-light" onclick="document.getElementById('id01').style.display='block'">More about...</button>
+<div id="id01" class="modal">
+    <form class="modal-content">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+        <div class="container">
+            <h3>Rating page</h3>
+            <p>Enjoying Toki?</p>
+            <img src="/Images/Toki.png"/>
+            <br />
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Rate us</button>
+            <div class="clearfix">
+            </div>
+        </div>
+    </form>
+    <br />
+</div>
 <a asp-action="Create" class="btn btn-outline-light" role="button">Create New</a>
 <a asp-action="Search" class="btn btn-outline-light" role="button">Search</a>
 <table class="table table-bordered table-hover">
