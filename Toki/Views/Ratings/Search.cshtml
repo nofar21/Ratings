@@ -5,7 +5,7 @@
 </form>
 <table class="table table-bordered table-hover">
     <thead class="thead-dark">
-        <tr>
+        <tr class="table-info">
             <th>Id</th>
             <th>Name Of Rater</th>
             <th>Rate Number</th>
@@ -17,7 +17,7 @@
 
         @foreach (var rating in Model)
         {
-        <tr>
+        <tr class="table-active">
             <td>@rating.Id</td>
             <td>@rating.NameOfRater</td>
             <td>@rating.RateNumber</td>

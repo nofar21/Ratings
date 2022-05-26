@@ -1,11 +1,17 @@
 ﻿@model Rating
-<ul>
-    <li>Id: @Model.Id</li>
-    <li>Name Of Rater: @Model.NameOfRater</li>
-    <li>Rate Number: @Model.RateNumber</li>
-    <li>Feedback: @Model.Feedback</li>
-    <li>Time: @Model.Time</li>
-</ul>
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">~Details about rating~</div>
+    <div class="card-body text-dark">
+        <ul class="card-text">
+            <li>Id: @Model.Id</li>
+            <li>Name Of Rater: @Model.NameOfRater</li>
+            <li>Rate Number: @Model.RateNumber</li>
+            <li>Feedback: @Model.Feedback</li>
+            <li>Time: @Model.Time</li>
+        </ul>
+    </div>
+</div>
+
 <form asp-action="Delete">
     <label>Are you sure you want to delete this rating?</label>
     <input class="btn btn-outline-light" type="submit" value="Delete" />

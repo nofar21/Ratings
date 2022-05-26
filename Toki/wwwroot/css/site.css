@@ -48,6 +48,7 @@ html {
     flex: 6;
     animation: move 45s infinite;
     height:fit-content;
+    width:fit-content;
 }
 
 .side {
@@ -60,6 +61,10 @@ html {
     flex: 2;
     overflow-y: auto;
     height: 450px;
+}
+
+ul {
+    list-style-type:circle;
 }
 
 body {
