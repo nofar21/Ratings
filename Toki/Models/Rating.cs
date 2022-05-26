@@ -21,7 +21,7 @@ namespace Toki.Models
         public int RateNumber { get; set; }
 
 
-        [StringLength(100, MinimumLength = 1)]
+        [StringLength(35, MinimumLength = 1)]
         [Display(Name = "Feedback")]
         [Required(AllowEmptyStrings = false)]
         public string Feedback { get; set; }
