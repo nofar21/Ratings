@@ -43,12 +43,13 @@ html {
 
 .container {
     margin-top: 50px;
+    margin-bottom: 50px;
     background-color: rgb(200, 192, 206);
     /* width: 25%; */
     flex: 6;
     animation: move 45s infinite;
-    height:fit-content;
-    width:fit-content;
+    height: fit-content;
+    width: fit-content;
 }
 
 .side {
@@ -76,4 +77,27 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
+}
+
+/* The Modal Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
 }
